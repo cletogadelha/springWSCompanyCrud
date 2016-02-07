@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.cletogadelha.repository.CompanyRepository;
 
 @Component
-public class ColabLoader implements ApplicationListener<ContextRefreshedEvent> {
+public class CompanyLoader implements ApplicationListener<ContextRefreshedEvent> {
  
     private CompanyRepository companyRepository;
  
