@@ -21,7 +21,7 @@ public class Company {
 	private int id;
 	
 	private String name;
-	private String adress;
+	private String address;
 	private String city;
 	private String country;
 	private String email;
@@ -50,12 +50,12 @@ public class Company {
 		this.name = name;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getCity() {
@@ -88,6 +88,14 @@ public class Company {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	public List<Employee> getEmployeeList() {
+		return employeeList;
+	}
+
+	public void setEmployeeList(List<Employee> employeeList) {
+		this.employeeList = employeeList;
 	}
 
 }

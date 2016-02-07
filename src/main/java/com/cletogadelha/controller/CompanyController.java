@@ -19,7 +19,7 @@ import com.cletogadelha.service.CompanyService;
 
 @CrossOrigin(origins = "http://localhost:9000")
 @RestController
-@RequestMapping("/rest/colaborador")
+@RequestMapping("/rest/company")
 public class CompanyController {
 	
 	@Autowired
