@@ -15,25 +15,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableTransactionManagement
 @EntityScan(basePackages = {"com.cletogadelha.entity"})
 public class AppConfig {  
-	
 	public static void main(String[] args) {
 		SpringApplication.run(AppConfig.class, args);
 	}
-	
-//    @Bean
-//    public CommonsMultipartResolver commonsMultipartResolver() {
-//        final CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
-//        commonsMultipartResolver.setMaxUploadSize(1000);
-//
-//        return commonsMultipartResolver;
-//    }
-//    
-//    @Bean
-//    public FilterRegistrationBean multipartFilterRegistrationBean() {
-//        final MultipartFilter multipartFilter = new MultipartFilter();
-//        final FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(multipartFilter);
-//        filterRegistrationBean.addInitParameter("multipartResolver", "commonsMultipartResolver");
-//        return filterRegistrationBean;
-//    }
-
 }  
