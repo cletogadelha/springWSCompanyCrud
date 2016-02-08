@@ -1,7 +1,7 @@
 web:
   build: .
   command: 'bash -c ''java -Dserver.port=$PORT -jar  target/springAngular-1.0.0.jar'''
-  working_dir: \target
+  working_dir: /app/user
   environment:
     PORT: 8080
   ports:
@@ -9,10 +9,10 @@ web:
 shell:
   build: .
   command: bash
-  working_dir: \target
+  working_dir: /app/user
   environment:
     PORT: 8080
   ports:
     - '8080:8080'
   volumes:
-    - '.:\target'
+    - '.:/app/user'
