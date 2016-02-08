@@ -31,6 +31,11 @@ public class Company {
     @JoinColumn(name="employee_id")
 	@JsonManagedReference
 	private List<Employee> employeeList;
+	
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+    @JoinColumn(name="beneficialowner_id")
+	@JsonManagedReference
+	private List<BeneficialOwner> benefOwnerList;
 							
 	public Company(){}
 	
@@ -96,6 +101,14 @@ public class Company {
 
 	public void setEmployeeList(List<Employee> employeeList) {
 		this.employeeList = employeeList;
+	}
+
+	public List<BeneficialOwner> getBenefOwnerList() {
+		return benefOwnerList;
+	}
+
+	public void setBenefOwnerList(List<BeneficialOwner> benefOwnerList) {
+		this.benefOwnerList = benefOwnerList;
 	}
 
 }

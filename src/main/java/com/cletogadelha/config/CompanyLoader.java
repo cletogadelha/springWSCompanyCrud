@@ -34,7 +34,7 @@ public class CompanyLoader implements ApplicationListener<ContextRefreshedEvent>
     	
     	List<Employee> list = new ArrayList<>();
     	
-    	for(int i=0;i<5;i++){
+    	for(int i=1;i<=5;i++){
     		Employee emp = new Employee();
     		emp.setName("Employee-"+i);
     		emp.setDepartment("Department-"+i);
