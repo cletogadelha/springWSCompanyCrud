@@ -23,31 +23,31 @@ import com.cletogadelha.service.CompanyService;
 public class CompanyController {
 	
 	@Autowired
-	private CompanyService colabService;
+	private CompanyService companyService;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public Company getCompanyDetail(@PathVariable("id") Integer id) {
-		return colabService.getCompanyDetail(id);
+		return companyService.getCompanyDetail(id);
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Company> getCompanyList() {
-		return colabService.getCompanyList();
+		return companyService.getCompanyList();
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public Company saveCompany(@RequestBody @Valid Company company){
-		return colabService.saveCompany(company);
+		return companyService.saveCompany(company);
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.PUT)
 	public Company updateCompany(@PathVariable("id") Integer id, @RequestBody @Valid Company company) {
-		return colabService.saveCompany(company);
+		return companyService.saveCompany(company);
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
 	public ResponseEntity<Boolean> removeCompany(@PathVariable("id") Integer id){
-		colabService.removeCompany(id);
+		companyService.removeCompany(id);
 		return new ResponseEntity<Boolean>(Boolean.TRUE, HttpStatus.OK);
 	}
 }
