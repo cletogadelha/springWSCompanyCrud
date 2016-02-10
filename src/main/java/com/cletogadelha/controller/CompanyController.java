@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cletogadelha.entity.Company;
 import com.cletogadelha.service.CompanyService;
 
-@CrossOrigin(origins = "http://localhost:9000")
+@CrossOrigin(origins = "https://angularappcompanycrud.herokuapp.com")
 @RestController
 @RequestMapping("/rest/company")
 public class CompanyController {
